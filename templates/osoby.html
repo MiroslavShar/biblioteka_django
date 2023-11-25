@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {%  for p in persons %}
+    <li>
+        {{  p.first_name  }} {{  p.last_name  }} {{ p.id }}
+        {% endfor %}
+    </li>
+</ul>
+</body>
+</html>

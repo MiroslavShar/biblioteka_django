@@ -1,0 +1,14 @@
+<form method="POST">
+    {% csrf_token %}
+        <label>
+            Imie:
+            <input type="text"
+                name="first_name">
+            Nazwisko
+            <input type="text"
+                name="last_name">
+            <button type="submit">
+                Wyslij
+            </button>
+        </label>
+</form>
