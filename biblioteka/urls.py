@@ -41,5 +41,6 @@ urlpatterns = [
     path('osoby/<int:id>/', views.osoba),
     path('addbook/', views.add_book),
     path('books/', views.look_book),
-    path('bookid/<int:id>/', views.book_id)
+    path('bookid/<int:id>/', views.book_id),
+    path('', views.index)
 ]

@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+{% block zawartosc %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +7,16 @@
     <title>Title</title>
 </head>
 <body>
+<form>
 <ul>
     {%  for p in persons %}
     <li>
-        {{  p.first_name  }} {{  p.last_name  }} {{ p.id }}
+        <a href="/osoby/" {  p.first_name  }}> {{  p.last_name  }} {{ p.id }}</a>
         {% endfor %}
     </li>
 </ul>
+</form>
+{% endblock %}
 </body>
 </html>
+

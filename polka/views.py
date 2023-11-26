@@ -159,3 +159,6 @@ def look_book(request):
 def book_id(request, id):
     bookid = Boook.objects.get(id=id)
     return render(request, 'b.html', {'book':bookid})
+
+def index(request):
+    return render(request,'base.html')
