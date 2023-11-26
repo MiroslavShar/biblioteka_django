@@ -11,8 +11,9 @@
 <ul>
     {%  for p in persons %}
     <li>
-        <a href="/osoby/" {  p.first_name  }}> {{  p.last_name  }} {{ p.id }}</a>
-        {% endfor %}
+        <a href="/osoby/{{ p.id }}"> {{ p.id }} {{  p.first_name  }} {{  p.last_name  }} </a>
+
+    {% endfor %}
     </li>
 </ul>
 </form>
