@@ -1,7 +1,7 @@
 import datetime
 import random
 import time
-from polka.models import Person
+from polka.models import Person, Boook
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
@@ -139,3 +139,23 @@ def wyswietlanie_osob(request):
 def osoba(request, id):
     o = Person.objects.get(id=id)
     return render(request, 'o.html', {'osoba':o})
+
+def add_book(request):
+    if request.method == 'GET':
+        response = render(request,"add_book.html")
+        return response
+    else:
+        title = request.POST['title']
+        author = request.POST['author']
+        p = Boook(title = title, author = author)
+        p.save()
+        return HttpResponse(f'Próbujesz dodać książke o nazwie {title} authora {author} do bazy')
+
+def look_book(request):
+    books = Boook.objects.all()
+    return render(request, 'books.html', {'books':books})
+
+
+def book_id(request, id):
+    bookid = Boook.objects.get(id=id)
+    return render(request, 'b.html', {'book':bookid})

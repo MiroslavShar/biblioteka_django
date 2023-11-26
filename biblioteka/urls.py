@@ -38,5 +38,8 @@ urlpatterns = [
     path('tabela/<int:numb1>/<int:numb2>/', views.tabela_mnożenia),
     path('dodaj_osobe/', views.dodaj_osobe),
     path('osoby/', views.wyswietlanie_osob),
-    path('osoby/<int:id>/', views.osoba)
+    path('osoby/<int:id>/', views.osoba),
+    path('addbook/', views.add_book),
+    path('books/', views.look_book),
+    path('bookid/<int:id>/', views.book_id)
 ]
